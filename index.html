@@ -118,6 +118,13 @@
         .price-card{background:var(--card);border-radius:20px;padding:48px;position:relative;overflow:hidden;text-align:center}
         .price-card::before{content:'';position:absolute;inset:-1px;border-radius:20px;padding:2px;background:linear-gradient(135deg,var(--green),var(--purple));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
         .price-card::after{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:rgba(247,43,138,.05);filter:blur(60px)}
+        .price-card.purple-card::before{background:linear-gradient(135deg,var(--purple),var(--blue))}
+        .price-card.purple-card::after{background:rgba(168,85,247,.08)}
+        .price-card.purple-card .checklist li::before{color:var(--purple)}
+        .price-card.purple-card .glow-green{color:var(--purple);text-shadow:0 0 40px rgba(168,85,247,.5),0 0 80px rgba(168,85,247,.2)}
+        .price-card.purple-card .btn-primary{background:linear-gradient(135deg,var(--purple),var(--blue));box-shadow:0 4px 24px rgba(168,85,247,.4)}
+        .price-card.purple-card .btn-primary:hover{box-shadow:0 4px 32px rgba(168,85,247,.6)}
+        .checklist .highlight{color:#fff;font-weight:600;background:linear-gradient(135deg,rgba(247,43,138,.15),rgba(247,43,138,.05));border:1px solid rgba(247,43,138,.3);border-radius:8px;padding:8px 12px;margin:-2px -12px}
         .price-value{font-family:'JetBrains Mono',monospace;font-size:5rem;font-weight:900;line-height:1;margin-bottom:4px}
         .price-currency{font-family:'JetBrains Mono',monospace;font-size:1.8rem;color:var(--muted);font-weight:400}
 
@@ -273,9 +280,30 @@
     <div class="sc">
         <div class="reveal" style="text-align:center;margin-bottom:60px">
             <div class="tag purple-tag">Pricing</div>
-            <h2>One price. <span class="glow-purple">Everything included.</span></h2>
+            <h2>Choose your <span class="glow-purple">package.</span></h2>
         </div>
-        <div style="max-width:680px;margin:0 auto" class="reveal">
+        <div class="grid-2 reveal" style="gap:28px;max-width:900px;margin:0 auto;align-items:start">
+
+            <!-- Essentials — 1,999 -->
+            <div class="price-card purple-card">
+                <div style="position:relative;z-index:1">
+                    <div class="tag" style="margin-bottom:24px">Colosseum Essentials</div>
+                    <div style="margin-bottom:6px">
+                        <span class="price-currency">USDC </span><span class="price-value glow-green">1,999</span>
+                    </div>
+                    <p style="color:var(--muted);margin-bottom:36px;font-size:.9rem">One-time. For Superteam builders.</p>
+                    <ul class="checklist" style="text-align:left;max-width:420px;margin:0 auto 36px">
+                        <li>1× DePitch online masterclass</li>
+                        <li>1× sofian-depitch.md pitch building skill</li>
+                        <li>Up to 15× async pitch roast reviews</li>
+                        <li>1× Legends Build product launch program for all your members</li>
+                        <li>1× «&nbsp;community of the week&nbsp;» spotlight on Legends.fun</li>
+                    </ul>
+                    <a href="https://t.me/depitchsofian" class="btn-primary">Get the Package &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Full Package — 4,999 -->
             <div class="price-card">
                 <div style="position:relative;z-index:1">
                     <div class="tag" style="margin-bottom:24px">Colosseum Hackathon Package</div>
@@ -287,13 +315,14 @@
                         <li>1× DePitch online masterclass</li>
                         <li>1× sofian-depitch.md pitch building skill</li>
                         <li>Up to 15× async pitch roast reviews</li>
-                        <li>Up to 15× 30-min 1:1 pitch coaching sessions</li>
+                        <li class="highlight">Up to 15× 30-min 1:1 pitch coaching sessions</li>
                         <li>1× Legends Build product launch program for all your members</li>
                         <li>1× «&nbsp;community of the week&nbsp;» spotlight on Legends.fun</li>
                     </ul>
                     <a href="https://t.me/depitchsofian" class="btn-primary">Get the Package &rarr;</a>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -408,7 +437,6 @@
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/cialoneCodes/status/1975834821449724019"></a></blockquote>
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/shanni_talks/status/1962395762840801519"></a></blockquote>
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/hypebiscus_xyz/status/1960222122900672997"></a></blockquote>
-                <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/SolBoxCloud/status/1952132890105430525"></a></blockquote>
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/founderAZIAN/status/1950778245210849458"></a></blockquote>
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/UnclePhil_01/status/1950012673866817624"></a></blockquote>
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/blockchainlures/status/1917472464273301792"></a></blockquote>
@@ -424,7 +452,6 @@
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/ataraxiaDEFIT/status/1973393920496197881"></a></blockquote>
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/Leravalera44/status/1962369783761977804"></a></blockquote>
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/wanaokii/status/1957649641295778033"></a></blockquote>
-                <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/blockballr/status/1950592442626978172"></a></blockquote>
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/KEMOS4BE/status/1949575039487029610"></a></blockquote>
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/montypump/status/1945106813940072662"></a></blockquote>
                 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/muse_jp_sol/status/1937547602318491802"></a></blockquote>
